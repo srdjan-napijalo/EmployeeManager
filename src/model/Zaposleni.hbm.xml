@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 17, 2019 11:31:18 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Zaposleni" table="zaposleni" catalog="zaposleni" optimistic-lock="version">
+        <id name="zaposleniId" type="java.lang.Integer">
+            <column name="zaposleni_id" />
+            <generator class="identity" />
+        </id>
+        <property name="ime" type="string">
+            <column name="ime" length="45" not-null="true" />
+        </property>
+        <property name="godine" type="int">
+            <column name="godine" not-null="true" />
+        </property>
+        <property name="adresa" type="string">
+            <column name="adresa" length="45" not-null="true" />
+        </property>
+        <property name="plata" type="int">
+            <column name="plata" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
